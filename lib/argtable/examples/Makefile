@@ -33,7 +33,7 @@ RM = rm -f
 MKDIR = mkdir -p
 RMDIR = rm -rf
 
-ifeq ($(wildcard ../argtable3.c),)
+if($(wildcard ../argtable3.c),)
     ARGTABLE_SRC = ../src/argtable3.c \
 		../src/arg_date.c \
 		../src/arg_dbl.c \
@@ -52,7 +52,7 @@ else
     ARGTABLE_SRC = ../argtable3.c
     ARGTABLE_HEADER = ../argtable3.h
 	ARGTABLE_INCLUDE_DIR = ..
-endif
+elseif
 
 .PHONY: all cleanall
 all: echo ls multisyntax mv myprog myprog_C89 uname testargtable3
